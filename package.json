@@ -1,0 +1,32 @@
+{
+  "name": "tallbag-concat",
+  "version": "1.0.0",
+  "description": "Tallbag factory that concatenates data from multiple tallbag sources",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staltz/tallbag-concat.git"
+  },
+  "main": "readme.cjs.js",
+  "module": "readme.js",
+  "types": "types.d.ts",
+  "scripts": {
+    "build": "rollup $npm_package_module -o $npm_package_main --f cjs",
+    "pretest": "npm run build",
+    "test": "tape test.js",
+    "prepare": "npm test"
+  },
+  "author": "staltz.com",
+  "license": "MIT",
+  "keywords": [
+    "callbag",
+    "tallbag"
+  ],
+  "devDependencies": {
+    "rollup": "^0.63.2",
+    "tape": "^4.8.0"
+  },
+  "dependencies": {
+    "tallbag": "~1.2.0",
+    "shadow-callbag": "~1.0.0"
+  }
+}
